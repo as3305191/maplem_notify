@@ -7,7 +7,7 @@ function index(){
         'Authorization:Bearer JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC'
     );
 
-    $key = json_encode($_POST["key"], true);
+    $key = json_encode($_GET["key"], true);
     $msg = json_decode(file_get_contents('php://input'), true);
   
     $message = array(
