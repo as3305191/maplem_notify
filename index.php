@@ -2,9 +2,8 @@
 
 
 function index(){
-    file_get_contents("php://input");
-    $key = json_decode($_POST["key"],, true);
-    $msg = json_decode($_POST["msg"],, true);
+    $key = json_decode($_POST["key"], true);
+    $msg = json_decode($_POST["msg"], true);
     $headers = array(
         'Content-Type: multipart/form-data',
         'Authorization:Bearer JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC'
