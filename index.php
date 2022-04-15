@@ -7,7 +7,7 @@ function index(){
     $msg = json_decode($_POST["msg"],, true);
     $headers = array(
         'Content-Type: multipart/form-data',
-        'Authorization:Bearer '."JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC"
+        'Authorization:Bearer JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC'
     );
 
     $message = array(
