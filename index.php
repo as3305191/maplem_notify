@@ -7,13 +7,9 @@ function index(){
         'Authorization:Bearer JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC'
     );
 
-    $key = json_decode($_GET["key"], true);
-    $msg = json_decode(file_get_contents('php://input'), true);
   
     $message = array(
-        'message' => $key,
-        'message' => file_get_contents('php://input'),
-        'message' => $msg,
+        'message' => 123123,
     );
 
     $ch = curl_init();
