@@ -2,9 +2,10 @@
 
 
 function index(){
+    $key = json_decode($_POST["key"]);
     $headers = array(
         'Content-Type: multipart/form-data',
-        'Authorization:Bearer '.$_POST["key"]
+        'Authorization:Bearer '.$key
     );
 
     $message = array(
