@@ -2,15 +2,15 @@
 
 
 function index(){
-    $message = array(
-        'message' => json_decode($_POST["msg"])
-    );
-
     $headers = array(
         'Content-Type: multipart/form-data',
-        'Authorization:Bearer '.json_decode($_POST["key"])
+        'Authorization:Bearer '.json_encode($_POST["key"])
     );
-    
+
+    $message = array(
+        'message' => json_encode($_POST["msg"])
+    );
+
     $ch = curl_init();
     curl_setopt($ch , CURLOPT_URL , "https://notify-api.line.me/api/notify");
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
