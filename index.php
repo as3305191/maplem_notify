@@ -3,7 +3,7 @@
 
 function index(){
     $key = json_decode($_POST["key"], true);
-    $msg = json_decode($_POST["msg"], true);
+    $msg = json_decode( file_get_contents('php://input'), true);
     $headers = array(
         'Content-Type: multipart/form-data',
         'Authorization:Bearer JVtjbu74jAWWb6QxvLRbZSD3019wrUP4qQNSdPAEKkC'
