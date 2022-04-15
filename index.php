@@ -3,12 +3,12 @@
 
 function index(){
     $message = array(
-        'message' => $_POST["msg"]
+        'message' => json_decode($_POST["msg"])
     );
 
     $headers = array(
         'Content-Type: multipart/form-data',
-        'Authorization:Bearer '.$_POST["key"]
+        'Authorization:Bearer '.json_decode($_POST["key"])
     );
     
     $ch = curl_init();
