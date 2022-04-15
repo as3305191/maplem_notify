@@ -2,17 +2,13 @@
 
 
 function index(){
-    $key = json_encode($_POST["key"]);
-    $msg = json_encode($_POST["msg"]);
-    $msg1 = json_decode($_POST["msg"]);
-    $msg2 = $_POST["msg"];
     $headers = array(
         'Content-Type: multipart/form-data',
-        'Authorization:Bearer '.$key 
+        'Authorization:Bearer '.json_encode($_POST["key"])
     );
 
     $message = array(
-        'message' =>$msg.$msg1.$msg2 
+        'message' => json_encode($_POST["msg"])
     );
 
     $ch = curl_init();
